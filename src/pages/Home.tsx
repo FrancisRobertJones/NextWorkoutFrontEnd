@@ -1,3 +1,4 @@
+import GoogleLoginButton from "@/components/LoginButton"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import WorkoutInput from "@/components/WorkoutInput"
@@ -20,8 +21,9 @@ function Home() {
                 </p>
               </div>
               <div className="space-x-4 py-6">
-                <NavLink to={"/create-workout"}><Button className="bg-primary text-primary-foreground hover:bg-primary/90">Get Started</Button></NavLink>
-                <Button variant="outline">Learn More</Button>
+              <GoogleLoginButton style="small"/>
+
+                <NavLink to={"/create-workout"}><Button className="bg-primary text-primary-foreground hover:bg-primary/90">Learn more</Button></NavLink>
               </div>
             </div>
           </div>
@@ -111,10 +113,8 @@ function Home() {
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
-                <Button className="w-full bg-background text-primary hover:bg-background/90" size="lg">
-                  Sign Up with Google
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+              <GoogleLoginButton style="full"/>
+
                 <p className="text-xs text-primary-foreground/70">
                   By signing up, you agree to our Terms of Service and Privacy Policy.
                 </p>
